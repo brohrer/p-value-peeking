@@ -14,7 +14,8 @@ def main():
     N = np.cumsum(np.ones(estimate.shape), axis=1)
 
     # Avoid numerically problematic variances at very low N
-    var_pooled[:, :10] = 1
+    var_pooled[:, :100] = 1
+    estimate[:, :100] = 0
 
     p_val = optimizely_p_value(N, estimate, var_pooled)
     running_violations = p_val < p_target
