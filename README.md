@@ -38,7 +38,8 @@ Change the number of data points collected by modifying
 `N_OBSERVATIONS` in `sim_ab.py`.
 
 Adjust the $\phi$ correction factor by modifying `phi` in 
-`phi_correction.py`.
+`phi_correction.py`. To remove the influence of the correction
+factor altogether, set `phi = 1`.
 
 Adjust the $\tau$ parameter in the Optimizely method by modifying `tau`
 in `optimizely_correction.py`.
